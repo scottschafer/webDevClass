@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example - single file</title>
+    </head>
+
+    <!-- CSS style definitions -->
+    <style>
+      h1 {
+        font-size: 24pt;
+        color: purple;
+        text-shadow: 3px 3px lightgray;
+      }      
+    </style>
+
+    <!-- Javascript -->
+    <script>
+      let fontSize = 24;
+
+      function onClickMinus() {
+        fontSize = fontSize - 2;
+        let title = document.getElementById('title');
+        title.style.fontSize = fontSize + 'pt';  
+      }
+
+      function onClickPlus() {
+        fontSize = fontSize + 2;
+        let title = document.getElementById('title');
+        title.style.fontSize = fontSize + 'pt';  
+      }
+    </script>
+
+    <body>
+      <p>
+        <button onclick="onClickMinus()">-</button>
+        <button onclick="onClickPlus()">+</button>
+      </p>
+
+      <h1 id='title'>
+        Hello world!
+      </h1>
+
+      <img src="world.jpg" id="world">
+    </body>
+</html>
