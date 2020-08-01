@@ -67,13 +67,13 @@ function getWinningPlayer(row, col) {
   // check diagonals
   if (boardXY[0][0] === 'X' &&
     boardXY[1][1] === 'X' &&
-    boardXY[2][1] === 'X') {
+    boardXY[2][2] === 'X') {
     return 'X'; // X wins!
   }
 
   if (boardXY[0][0] === 'O' &&
-    boardXY[1][0] === 'O' &&
-    boardXY[2][0] === 'O') {
+    boardXY[1][1] === 'O' &&
+    boardXY[2][2] === 'O') {
     return 'O'; // X wins!
   }
 
@@ -89,7 +89,7 @@ function getWinningPlayer(row, col) {
     return 'O'; // O wins!
   }
 
-  // if no winner, then check for tie
+  // if no winner, the game is still in progress if there are blank squares
   for (let row = 0; row < 3; row++) {
     for (let col = 0; col < 3; col++) {
       if (boardXY[row][col] === ' ') {
@@ -97,6 +97,8 @@ function getWinningPlayer(row, col) {
       }
     }
   }
+
+  // no winner, no blank squares, so it's a tie
   return 'tie';
 }
 
