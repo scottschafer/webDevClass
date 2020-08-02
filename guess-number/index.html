@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Guess number</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body onload="startNewGame()">
+  <script src="scripts/globals.js"></script>
+  <script src="scripts/utilities.js"></script>
+  <script src="scripts/game.js"></script>
+
+  <p id="idPrompt"></p>
+
+  <label>
+    What's your guess?
+    <input id="idUserGuess" type="number">
+    <button onclick="onClickGuess()">Guess</button>
+  </label>
+
+  <p id="isMessage">
+    <!-- Report whether this was high or low -->
+  </p>
+
+</body>
+
+</html>
